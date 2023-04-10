@@ -1,0 +1,30 @@
+<%- include('./partials/header'); %>
+<link href="/stylesheets/catalog.css" rel="stylesheet"/>
+  <main>
+
+
+    <h1></h1>
+    <p> Welcome to <%= title %> a very basic Express website developed as a tutorial example on the Mozilla
+      Developer Network.
+    </p>
+<% if(error) {%>
+   EROOOOR <%= error %>
+  <%} else {%>
+    <ul>
+      <li> <span>Books: </span><%= data.book_count %></li>
+      <li> <span>Copies:</span> <%=data.book_instance_count %></li>
+      <li> <span>Copies available:</span> <%= data.book_instance_available_count %></li>
+      <li> <span>Authors: </span><%=data.author_count%></li>
+      <li> <span>Genres:</span> <%=data.genre_count %></li>
+
+    </ul>
+   <%}%>
+  </main>
+
+  <footer>
+    <%- include('./partials/footer'); %>
+  </footer>
+
+  </body>
+
+  </html>
