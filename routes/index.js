@@ -1,18 +1,12 @@
-const express = require("express");
-const router = express.Router();
+var express = require('express');
+var router = express.Router();
 
-const user = {
-    firstName: 'Phil',
-    lastName: 'Cook',
-}
+/* GET home page. */
+// router.get('/', function(req, res, next) {
+//   res.render('index', { title: 'Express!' });
+// });
 
-//router for index page
-router.get("/", function(req, res, next){
-    // res.render("index", {
-    //     user: user
-    // });
-    res.redirect("/catalog");
+router.get("/", function (req, res) {
+  res.redirect("/catalog");
 });
-
-
 module.exports = router;
